@@ -1,0 +1,70 @@
+<template>
+
+<lightning-card title="for:each loop">
+
+<p>Sehir Listesi :::{sehirListesi}</p>
+<template for:each={sehirListesi} for:item="sehir">
+
+<p key={sehir}>Turkiyenin Baskenti : ***{sehir}</p>
+
+</template>
+
+</lightning-card>
+
+<br>
+
+<lightning-card title="ITERATOR loop">
+
+    
+    <template iterator:it={sehirListesi} >
+    
+    <p key={it.value}>Turkiyenin Baskenti : ***{it.value}***</p>
+    
+    </template>
+    
+    </lightning-card>
+<br>
+
+<lightning-card title="CICEK LISTESI">
+   
+    <p>Cicek Listesi :::{cicekListesi}</p>
+
+<template for:each={cicekListesi} for:item="cicek">
+
+<p key={cicek.id}>   CICEK : ***{cicek.name}</p>
+<p key={cicek.id}>   CICEK : ***{cicek.familya}</p>
+<p key={cicek.id}>   <img src={cicek.imgUrl} alt="User Image" height="100px" width="100px"    /></p>
+
+</template>
+
+
+</lightning-card>
+
+<br>
+
+<lightning-card title="CICEK LISTESI (LIST)">
+   
+<ul>
+    <template for:each={cicekListesi} for:item="cicek">
+        <li key={cicek.id}>
+
+            <p> CICEK : ***{cicek.name}</p>
+            <p> CICEK : ***{cicek.familya}</p>
+            <img src={cicek.imgUrl} alt="User Image" height="200px" width="200px"    />
+            <br>
+
+        </li>
+
+        
+        
+        </template>
+
+
+</ul>
+
+
+
+</lightning-card>
+
+
+</template>

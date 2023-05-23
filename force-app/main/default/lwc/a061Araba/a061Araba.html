@@ -1,0 +1,34 @@
+<template>
+    
+    <lightning-card  title=" COMPOSITION " >
+     <h1> ARABA  </h1>
+     <lightning-input 
+     type="text" 
+     label="Araba Markasi" 
+     onchange={handleArabaMarkasi}  >   </lightning-input>
+    <br>
+    
+    <lightning-input 
+     type="text" 
+     label="Motor Cinsi" 
+     onchange={handleMotorCinsi}  >   </lightning-input>
+    
+     <br>
+     <lightning-input 
+     type="text" 
+     label="Yakit Turu" 
+     onchange={handleYakitTuru}  >   </lightning-input>
+    
+     <h1>Araba Markasi ={arabaMarkasi}</h1>
+     <br>
+    
+    <c-a062-motor    
+     motor-cinsi = {babadanMotorCinsi}
+     babadan-yakit-turu = {dedenYakitTuru}
+    ></c-a062-motor>
+    <br>
+    
+    </lightning-card>
+    
+    
+    </template>

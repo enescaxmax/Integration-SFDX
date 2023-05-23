@@ -1,0 +1,49 @@
+<template>
+    
+    <lightning-card  title="Merhabalar Efendim DBTekY">
+        <h1>benim adim {isim}</h1>
+    </lightning-card>
+
+<br>
+
+    
+    <lightning-card  title="Merhabalar Efendim DBCiftY">
+        <lightning-input 
+        type="text" 
+        label="Lutfen Isminizi Bahseder misiniz"
+        onchange={handleInput}></lightning-input>
+        <h1>Benim Adim :: {ad}</h1>
+    </lightning-card>
+
+    <br>
+
+    <lightning-card  title="Merhabalar Efendim Tam Isim">
+        <lightning-input 
+        type="text" 
+        label="Isminiz"
+        onblur={handleIsim}></lightning-input>
+
+        <lightning-input 
+        type="text" 
+        label="Soy Isminiz"
+        onchange={handleSoyIsim}></lightning-input>
+
+        <h1>Benim Adim :: {fullName}</h1>
+    </lightning-card>
+<br>
+
+<lightning-card  title="Merhabalar Efendim Toplam Number">
+    <lightning-input 
+    type="number" 
+    label="Number First"
+    onblur={handleFirstNumber}></lightning-input>
+
+<lightning-input 
+    type="number" 
+    label="Number Second"
+    onchange={handleSecondNumber}></lightning-input>
+
+    <h1>Total Number :: {fullNumber}</h1>
+</lightning-card>
+
+</template>
