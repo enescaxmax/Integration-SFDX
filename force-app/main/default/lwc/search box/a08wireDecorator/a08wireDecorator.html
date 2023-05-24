@@ -1,0 +1,28 @@
+<template>
+    
+    <lightning-card title=" @wire decorator" >
+
+        <lightning-input 
+            type="text" 
+            label="Account Name"
+            placeholder="Account Name Here"
+            onchange={handleAccount}></lightning-input>
+
+            <br>
+
+    <ul>
+     
+        <template for:each={accList.data} for:item="acc" >
+         <li  key={acc.Id} >
+            <p >  Account  Name:    {acc.Name}        </p>
+            <p >   Account ID  :   {acc.Id}        </p>
+          <br>
+         </li>
+       
+        </template>
+    </ul>
+
+
+</lightning-card>
+
+</template>

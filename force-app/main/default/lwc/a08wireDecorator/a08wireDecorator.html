@@ -1,0 +1,20 @@
+<template>
+   <lightning-card title=" @wire decorator ile SF data cekmek" >
+ 
+
+    <ul>
+        <template for:each={wiredAccounts.data} for:item="acc">
+            <li key={acc.Id}>  
+
+                <h1  > Account Id   : {acc.Id} </h1>
+                <h1  > Account Name  : {acc.Name}  </h1>
+               <br>
+                
+            </li>
+             
+        </template>   
+   </ul>
+
+
+   </lightning-card>
+</template>

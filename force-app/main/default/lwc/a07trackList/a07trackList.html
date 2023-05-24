@@ -1,0 +1,45 @@
+<template>
+    
+<lightning-card  title="@track  decorator LIST uzerinde">
+
+
+<lightning-input 
+ label="Adiniz giriniz"
+ placeholder="ADINIZ BURAYA YAZIN"
+ onchange={handleIsim}></lightning-input>
+<br>
+
+ <lightning-input 
+ label="Yasinizi giriniz"
+ placeholder="YASINIZI BURAYA YAZIN"
+ onchange={handleYas}></lightning-input>
+
+ <br>
+
+ <lightning-button 
+    variant="brand" 
+    label="Birey Ekle" 
+    title="Primary action" 
+    onclick={handleClick} 
+    class="slds-m-left_x-small"></lightning-button>
+
+    <ul>
+        <template for:each={aileBireyleri} for:item="birey">
+            <li key={birey.id}>  
+
+                <h1  > Birey adi          : {birey.name} </h1>
+                <h1  > Birey yasi  : {birey.yas}  </h1>
+               <br>
+                
+            </li>
+             
+        </template>   
+   </ul>
+   
+
+
+
+</lightning-card>
+
+
+</template>

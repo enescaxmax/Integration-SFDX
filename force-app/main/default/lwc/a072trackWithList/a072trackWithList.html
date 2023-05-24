@@ -1,0 +1,47 @@
+<template>
+  
+    <lightning-card title="@track decorator with List">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input 
+             type="text"
+             label="Provide Your Name" 
+             placeholder="NAME HERE"
+             onchange={handleName}
+             ></lightning-input>
+
+<br>
+            <lightning-input 
+            type="text"
+            label="Provide Your AGE" 
+            placeholder="AGE HERE"
+            onchange={handleAge}
+            ></lightning-input>
+
+        </div>
+<br>
+
+<lightning-button 
+    variant="brand" 
+    label="ADD FAMILY MEMBER" title="Primary action" 
+    onclick={handleClick} 
+    class="slds-m-left_x-small"></lightning-button>
+
+    <br>
+
+     <h1>MY FAMILY MEMBERS</h1>
+
+        <ul>
+     
+        <template for:each={familyMemberList} for:item="member" >
+         <li  key={member.id} >
+            <p >    Name:    {member.name}        </p>
+            <p >    Age :   {member.age}        </p>
+          <br>
+         </li>
+       
+        </template>
+    </ul>
+    
+    </lightning-card> 
+
+</template>
